@@ -18,7 +18,7 @@ export const getTodos = () => async dispatch => {
 }
 export const getData = () => {
     const getDataAction = async dispatch => {
-        const response = await axios.get("https://jsonplaceholder.typicode.com/todos?_limit=5")
+        const response = await axios.get("https://express-mongodb-todos.herokuapp.com/api/v1/todos")
         dispatch({
             type: GET_TODOS,
             payload: response.data
